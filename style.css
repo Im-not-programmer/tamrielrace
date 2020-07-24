@@ -1,0 +1,208 @@
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+}
+
+.file-upload {
+  width: 70%;
+    height: 100%;
+    background-color: #eeeeee;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin: 20px;
+	background-color: #ffffff;
+  border: 4px solid #000000;
+  position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #eeeeee;
+  border: 4px solid #7d7d7d;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin-top: 2rem;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.navbar-brand .navbar-light {
+  	font-family: NanumBarunGothic;
+ 	text-align: center;
+	font-size: 2rem;
+	color: #000000;
+}
+
+.nav-distance {
+	padding: 3.4% 6.3%;
+}
+
+.navbar-light .navbar-toggler {
+	border-color: #ffffff;
+}
+
+.section {
+	margin-top: 17.6%;
+}
+
+.title {
+  font-family: NanumBarunGothic;
+  text-align: center;
+	font-size: 2rem;
+  color: #000000;
+}
+
+.subtitle {
+  font-family: NanumBarunGothic;
+	margin-top: 3.2%;
+  text-align: center;
+	font-size: 1.5rem;
+  color: #000000;
+}
+
+
+		
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 10px;
+	}
+}
+
+.doramg-link {
+	font-family: NanumBarunGothic;
+  font-size: 2rem;
+  text-align: center;
+  color: #000000;
+}
+
+.doramg {
+	margin-top: 15.1%;
+	
+}
+
+a:hover {
+  text-decoration: none;
+	color: #000000;
+}
+
+
+.upload {
+	 width: 17%;
+  object-fit: contain;
+}
+
+.upload-text {
+	  font-family: NanumBarunGothic;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.drag-text h3 {
+	color: #000000;
+	padding: 13%;
+}
+
+/* 그래프 영역 */
+.graph {
+	
+}
+
+.result-message {
+	font-family: NanumBarunGothic;
+	font-size: 1.2rem;
+	text-align: center;
+	color: blue;
+	margin-top: 2rem;
+	
+}
+.loading {
+	font-family: NanumBarunGothic;
+	font-size: 1.1rem;
+	margin-top: 0.7rem;
+}

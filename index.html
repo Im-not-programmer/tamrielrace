@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>나의 탐리엘 종족을 알아보자</title>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<!-- CSS파일 연결-->
+		<link rel="stylesheet" href="style.css" />
+		<!-- 공유버튼 -->
+		<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1637b7c6dce9c5"></script>
+
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
+			<a class="navbar-brand" href="#">탐리엘 종족 찾기</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto"></ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input
+						class="form-control mr-sm-2"
+						type="search"
+						placeholder="Search"
+						aria-label="Search"
+					/>
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+						Search
+					</button>
+				</form>
+			</div>
+		</nav>
+		<!-- 중간섹션1 -->
+		<section class="section">
+			<h1 class="title">탐리엘 종족 테스트</h1>
+			<h2 class="subtitle">내가 탐리엘 주민이라면 어떤 종족일까?</h2>
+		</section>
+		<!--중간섹션2 -->
+
+		<section class="container bydoramg">
+			<div class="doramg d-flex flex-row-reverse bd-highlight">
+				<img src="img/3.jpg" alt="" class="doramg-icon" style="width: 40px;" />
+				<a href="" class="doramg-link">by doramg</a>
+			</div>
+		</section>
+		<!-- 이미지 업로드 창-->
+		<script
+			class="jsbin"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<div class="file-upload">
+			<div class="image-upload-wrap">
+				<input
+					class="file-upload-input"
+					type="file"
+					onchange="readURL(this);"
+					accept="image/*"/>
+				<div class="drag-text">
+					<img src="img/1.png" class="mt-5 upload" />
+					<h3 class="upload-text">얼굴 사진을 올려놓거나 눌러서 업로드하세요!</h3>
+				</div>
+			</div>
+			<div class="file-upload-content">
+				<img class="file-upload-image" id="face-image" src="#" alt="your image" style=" width: 60%;" />		
+				<p>
+					
+				</p>
+				<div class="spinner-border" role="status">
+					<span class="sr-only">Loading</span>
+</div>
+				
+			<p class="loading">AI가 당신의 종족을 분석 중입니다.</p>
+				
+		
+<!-- 결과표 -->
+				<div id="label-container"></div>
+				<!-- 여기에 사진대체-->
+				<div class="result-image">
+					<img class="nord" id="nord-image" src="img/1nord.png"/>
+					<img class="imperial" id="imperial-image" src="img/1imperial.png"/>
+					<img class="breton" id="breton-image" src="img/1breton.png"/>
+					<img class="altmer" id="altmer-image" src="img/1altmer.png"/>
+					<img class="dunmer" id="dunmer-image" src="img/1dunmer.png"/>
+					<img class="orc" id="orc-image" src="img/1orc.png"/>
+					<img class="bosmer" id="bosmer-image" src="img/1bosmer.png"/>
+					<img class="redguard" id="redguard-image" src="img/1redguard.png"/>
+					<img class="khajiit" id="khajiit-image" src="img/1khajiit.png"/>
+					<img class="argonian" id="argonian-image" src="img/1argonian.png"/>
+				</div>
+				<p class="result-message">
+				</p>
+				
+				<!-- 공유하기 버튼-->
+				<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox".hide></div>
+				<!-- 재시도-->
+				<div class="image-title-wrap">
+					<button type="button" onclick="removeUpload()" class="remove-image">
+						다른 사진으로 재시도
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="disqus_thread"></div>
+		<!-- 디스커스 댓글달기 -->
+		<script>
+			/**
+			 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+			/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+			(function () {
+				// DON'T EDIT BELOW THIS LINE
+				var d = document,
+					s = d.createElement('script');
+				s.src = 'https://tamrielrace-3.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript
+			>Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+		>
+
+		<!-- 부트스트랩 자바스크립트-->
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- 인공지능 인식 연결코드-->
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+		<!-- 이미지 업로드 상자 JS-->
+		<script>
+			$('.result-image').hide();
+			$('.addthis_inline_share_toolbox').hide();
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						$('.image-upload-wrap').hide();
+
+						$('.file-upload-image').attr('src', e.target.result);
+						$('.file-upload-content').show();
+
+						$('.image-title').html(input.files[0].name);
+					};
+
+					reader.readAsDataURL(input.files[0]);
+					init().then(()=>{
+						predict();
+					});
+				} else {
+					removeUpload();
+				}
+			}
+
+			function removeUpload() {
+				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+				$('.file-upload-content').hide();
+				$('.image-upload-wrap').show();
+			}		
+			$('.image-upload-wrap').bind('dragover', function () {
+				$('.image-upload-wrap').addClass('image-dropping');
+			});
+			$('.image-upload-wrap').bind('dragleave', function () {
+				$('.image-upload-wrap').removeClass('image-dropping');
+			});
+		</script>
+		<!--인공지능 인식 서비스 JS-->
+		<script type="text/javascript">
+			// More API functions here:
+			// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+			// the link to your model provided by Teachable Machine export panel
+			const URL = 'https://teachablemachine.withgoogle.com/models/gE8V3A_iv/';
+
+			let model, webcam, labelContainer, maxPredictions;
+
+			// Load the image model and setup the webcam
+			async function init() {
+				const modelURL = URL + 'model.json';
+				const metadataURL = URL + 'metadata.json';
+
+				// load the model and metadata
+				// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+				// or files from your local hard drive
+				// Note: the pose library adds "tmImage" object to your window (window.tmImage)
+				model = await tmImage.load(modelURL, metadataURL);
+				maxPredictions = model.getTotalClasses();
+
+				// append elements to the DOM
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					// and class labels
+					labelContainer.appendChild(document.createElement('div'));
+				}
+			}
+			// run the webcam image through the image model
+			async function predict() {
+				// predict can take in an image, video or canvas html element
+				var image = document.getElementById('face-image');
+				const prediction = await model.predict(image, false);
+								
+				// 수치가 높은 순서대로 정리하기
+				prediction.sort((a,b) => (b.probability > a.probability) ? 1 : ((a.probability > b.probability) ? -1 : 0)); 
+
+				
+				//결과 메세지
+				var resultMessage;
+				var resultImage;
+				switch (prediction[0].className) {
+  case "노드":
+						resultImage = document.getElementById('nord-image');
+    resultMessage = "탐리엘의 당신은 노드입니다. 서늘한 스카이림으로 여행을 떠나보세요. 화이트런에서 판매하는 벌꿀주는 별미입니다. 벌꿀주 한 잔과 든든한 도끼 한 자루만 있으면 당신의 앞을 가로막을 것은 없습니다."
+    break;
+  case "임페리얼":
+						resultImage = document.getElementById('imperial-image');
+    resultMessage = "오, 시로딜의 주민이시군요! 임페리얼, 당신의 관상에는 재물이 가득합니다. 그건 당신이 다재다능해서인가요? 어쨌든, 당신 집안의 족보를 한 번 살펴보세요. 어쩌면 당신은 황가의 피를 지녔을지도 모르니까요."
+    break;
+  case "브레튼":
+						resultImage = document.getElementById('breton-image');
+    resultMessage = "풍족한 하이락 출신의 브레튼이군요. 기억을 더듬어 보세요. 어쩌면 당신은 마법의 대가였을 수도 있습니다. 글렌움브라의 초원을 바라보면 속이 뻥 뚫리는 기분을 느끼실 거에요. "
+    break;
+  case "하이엘프":
+						resultImage = document.getElementById('altmer-image');
+    resultMessage = "신비로운 서머셋 섬의 주민 알트머시군요. 당신의 마법적 재능은 이미 최고입니다. 하지만 종족적 자존심보다 다른 이들과 조화를 이루는 것이 당신은 한층 더 강하게 만들어 줄 것입니다. "
+    break;
+  case "오크":
+						resultImage = document.getElementById('orc-image');
+    resultMessage = "단단한 육체와 강력한 힘을 가진 오시머! 당신의 모습은 로스가 대장간의 일원임을 증명하는군요. 당신의 고향 오시니움에 가면 호커구이는 꼭 드세요. 당신의 힘이 더 불끈불끈 솟아오를지도 모르니까요."
+    break;
+  case "우드엘프":
+						resultImage = document.getElementById('bosmer-image');
+    resultMessage = "당신은 수풀이 우거진 발렌우드 출신의 보스머입니다. 몸이 가벼워 날랜 것이 느껴지십니까? 심지어 똑똑하기까지 하죠. 모든걸 다 가졌어요. 다른 이들보다 키도 크군요. 엘든루트 나무 꼭대기에서부터 키를 재면 말입니다."
+    break;
+  case "다크엘프":
+    resultMessage = "당신은 모로윈드의 신비한 주민 던머입니다. 화산 근처에 살아서 그런지 불을 두려워하지 않습니다. 하지만 당신의 피부색은... 카이머의 저주 때문일까요? 아니면 화산 열기에 그을린 것일까요?"
+						resultImage = document.getElementById('dunmer-image');
+						break;
+					case "레드가드":
+						resultImage = document.getElementById('redguard-image');
+    resultMessage = "당신은 척박한 해머펠 출신의 레드가드입니다. 당신의 지구력은 장어 꼬리를 수백개 먹은 백만돌이보다도 더 오래갑니다. 만약 탐리엘에 마라톤이 있었다면 당신은 늘 우승후보 가운데 있었을 겁니다."
+						break;
+					case "카짓":
+						resultImage = document.getElementById('khajiit-image');
+    resultMessage = "엘스웨어의 귀염둥이 카짓이네요. 날카로운 발톱은 남을 상처주기도 하지만 당신과 가까운 이들은 당신이 얼마나 따뜻한지 알 겁니다. 만약 당신이 뿅가는 스쿠마를 하지만 않았다면 말이죠."
+						break;
+					case "아르고니안":
+						resultImage = document.getElementById('argonian-image');
+    resultMessage = "당신은 블랙마쉬의 신비한 아르고니안입니다. 히스트의 축복으로 생명의 기운이 항상 당신을 감싸고 있습니다. 당신은 다른 어떤 종족보다 생명력이 뛰어납니다. 지갑을 좋아하는 밀렵꾼을 만나지만 않는다면 말이죠."
+}
+				$('.spinner-border').hide();
+				$('.loading').hide();
+				$('.result-image').show();
+				$('.file-upload-image').hide();
+				$('.addthis_inline_share_toolbox').show();
+				$('.result-image').html(resultImage);
+				$('.result-message').html(resultMessage);
+				
+			
+				for (let i = 0; i < maxPredictions; i++) {
+				}
+			}
+		</script>
+	</body>
+	<!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+--></html>
