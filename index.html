@@ -8,6 +8,23 @@
 		<meta charset="utf-8" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 		<title>나의 탐리엘 종족을 알아보자</title>
 		<!-- Bootstrap CSS -->
 		<link
@@ -38,20 +55,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto"></ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input
-						class="form-control mr-sm-2"
-						type="search"
-						placeholder="Search"
-						aria-label="Search"
-					/>
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-						Search
-					</button>
-				</form>
-			</div>
+			
 		</nav>
 		<!-- 중간섹션1 -->
 		<section class="section">
@@ -99,20 +103,23 @@
 				<div id="label-container"></div>
 				<!-- 여기에 사진대체-->
 				<div class="result-image">
-					<img class="nord" id="nord-image" src="img/1nord.png"/>
-					<img class="imperial" id="imperial-image" src="img/1imperial.png"/>
-					<img class="breton" id="breton-image" src="img/1breton.png"/>
-					<img class="altmer" id="altmer-image" src="img/1altmer.png"/>
-					<img class="dunmer" id="dunmer-image" src="img/1dunmer.png"/>
-					<img class="orc" id="orc-image" src="img/1orc.png"/>
-					<img class="bosmer" id="bosmer-image" src="img/1bosmer.png"/>
-					<img class="redguard" id="redguard-image" src="img/1redguard.png"/>
-					<img class="khajiit" id="khajiit-image" src="img/1khajiit.png"/>
-					<img class="argonian" id="argonian-image" src="img/1argonian.png"/>
+					<img class="nord" id="nord-image" src="img/1nord.png" style="width: 35%;"/>
+					<img class="imperial" id="imperial-image" src="img/1imperial.png" style="width: 35%;"/>
+					<img class="breton" id="breton-image" src="img/1breton.png" style="width: 35%;"/>
+					<img class="altmer" id="altmer-image" src="img/1altmer.png" style="width: 35%;"/>
+					<img class="dunmer" id="dunmer-image" src="img/1dunmer.png" style="width: 35%;"/>
+					<img class="orc" id="orc-image" src="img/1orc.png" style="width: 70%;"/>
+					<img class="bosmer" id="bosmer-image" src="img/1bosmer.png" style="width: 35%;"/>
+					<img class="redguard" id="redguard-image" src="img/1redguard.png" style="width: 35%;"/>
+					<img class="khajiit" id="khajiit-image" src="img/1khajiit.png" style="width: 35%;"/>
+					<img class="argonian" id="argonian-image" src="img/1argonian.png" style="width: 35%;"/>
 				</div>
 				<p class="result-message">
+				</p>				
+				<p class="speciality-message">					
 				</p>
-				
+				<p class="recommend-message">
+				</p>
 				<!-- 공유하기 버튼-->
 				<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox".hide></div>
 				<!-- 재시도-->
@@ -176,6 +183,7 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 		<script>
 			$('.result-image').hide();
 			$('.addthis_inline_share_toolbox').hide();
+			$('.remove-image').hide();
 			function readURL(input) {
 				if (input.files && input.files[0]) {
 					var reader = new FileReader();
@@ -199,9 +207,9 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 			}
 
 			function removeUpload() {
-				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
-				$('.file-upload-content').hide();
-				$('.image-upload-wrap').show();
+				location.reload(true);
+				location.href = location.href;
+				history.go(0);
 			}		
 			$('.image-upload-wrap').bind('dragover', function () {
 				$('.image-upload-wrap').addClass('image-dropping');
@@ -252,46 +260,58 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 				//결과 메세지
 				var resultMessage;
 				var resultImage;
+				var recommendTitle = "추천역할";
+				var recommend;
 				switch (prediction[0].className) {
   case "노드":
 						resultImage = document.getElementById('nord-image');
     resultMessage = "탐리엘의 당신은 노드입니다. 서늘한 스카이림으로 여행을 떠나보세요. 화이트런에서 판매하는 벌꿀주는 별미입니다. 벌꿀주 한 잔과 든든한 도끼 한 자루만 있으면 당신의 앞을 가로막을 것은 없습니다."
+						recommend = "탱커, 스태미나DPS"
     break;
   case "임페리얼":
 						resultImage = document.getElementById('imperial-image');
     resultMessage = "오, 시로딜의 주민이시군요! 임페리얼, 당신의 관상에는 재물이 가득합니다. 그건 당신이 다재다능해서인가요? 어쨌든, 당신 집안의 족보를 한 번 살펴보세요. 어쩌면 당신은 황가의 피를 지녔을지도 모르니까요."
+						recommend = "탱커, 스태미나DPS"
     break;
   case "브레튼":
 						resultImage = document.getElementById('breton-image');
     resultMessage = "풍족한 하이락 출신의 브레튼이군요. 기억을 더듬어 보세요. 어쩌면 당신은 마법의 대가였을 수도 있습니다. 글렌움브라의 초원을 바라보면 속이 뻥 뚫리는 기분을 느끼실 거에요. "
+						recommend = "매지카DPS, 힐러, 탱커"
     break;
   case "하이엘프":
 						resultImage = document.getElementById('altmer-image');
     resultMessage = "신비로운 서머셋 섬의 주민 알트머시군요. 당신의 마법적 재능은 이미 최고입니다. 하지만 종족적 자존심보다 다른 이들과 조화를 이루는 것이 당신은 한층 더 강하게 만들어 줄 것입니다. "
+						recommend = "매지카DPS, 힐러"
     break;
   case "오크":
 						resultImage = document.getElementById('orc-image');
     resultMessage = "단단한 육체와 강력한 힘을 가진 오시머! 당신의 모습은 로스가 대장간의 일원임을 증명하는군요. 당신의 고향 오시니움에 가면 호커구이는 꼭 드세요. 당신의 힘이 더 불끈불끈 솟아오를지도 모르니까요."
+						recommend = "스태미나DPS, 탱커"
     break;
   case "우드엘프":
 						resultImage = document.getElementById('bosmer-image');
     resultMessage = "당신은 수풀이 우거진 발렌우드 출신의 보스머입니다. 몸이 가벼워 날랜 것이 느껴지십니까? 심지어 똑똑하기까지 하죠. 모든걸 다 가졌어요. 다른 이들보다 키도 크군요. 엘든루트 나무 꼭대기에서부터 키를 재면 말입니다."
+						recommend = "스태미나DPS"
     break;
   case "다크엘프":
-    resultMessage = "당신은 모로윈드의 신비한 주민 던머입니다. 화산 근처에 살아서 그런지 불을 두려워하지 않습니다. 하지만 당신의 피부색은... 카이머의 저주 때문일까요? 아니면 화산 열기에 그을린 것일까요?"
 						resultImage = document.getElementById('dunmer-image');
+    resultMessage = "당신은 모로윈드의 신비한 주민 던머입니다. 화산 근처에 살아서 그런지 불을 두려워하지 않습니다. 하지만 당신의 피부색은... 카이머의 저주 때문일까요? 아니면 화산 열기에 그을린 것일까요?"
+						recommend = "매지카DPS, 스태미나DPS, 탱커, 힐러"
 						break;
 					case "레드가드":
 						resultImage = document.getElementById('redguard-image');
     resultMessage = "당신은 척박한 해머펠 출신의 레드가드입니다. 당신의 지구력은 장어 꼬리를 수백개 먹은 백만돌이보다도 더 오래갑니다. 만약 탐리엘에 마라톤이 있었다면 당신은 늘 우승후보 가운데 있었을 겁니다."
+						recommend = "스태미나DPS, 탱커"
 						break;
 					case "카짓":
 						resultImage = document.getElementById('khajiit-image');
     resultMessage = "엘스웨어의 귀염둥이 카짓이네요. 날카로운 발톱은 남을 상처주기도 하지만 당신과 가까운 이들은 당신이 얼마나 따뜻한지 알 겁니다. 만약 당신이 뿅가는 스쿠마를 하지만 않았다면 말이죠."
+						recommend = "스태미나DPS, 매지카DPS, 힐러, 탱커"
 						break;
 					case "아르고니안":
 						resultImage = document.getElementById('argonian-image');
     resultMessage = "당신은 블랙마쉬의 신비한 아르고니안입니다. 히스트의 축복으로 생명의 기운이 항상 당신을 감싸고 있습니다. 당신은 다른 어떤 종족보다 생명력이 뛰어납니다. 지갑을 좋아하는 밀렵꾼을 만나지만 않는다면 말이죠."
+						recommend = "힐러, 탱커, 매지카DPS"
 }
 				$('.spinner-border').hide();
 				$('.loading').hide();
@@ -300,6 +320,8 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 				$('.addthis_inline_share_toolbox').show();
 				$('.result-image').html(resultImage);
 				$('.result-message').html(resultMessage);
+				$('.remove-image').show();
+				$('.recommend-message').html(recommendTitle + ": " + recommend);
 				
 			
 				for (let i = 0; i < maxPredictions; i++) {
