@@ -215,3 +215,10 @@ a:hover {
 	color: #4a56a8;
 	margin-bottom: 2rem;
 }
+.add-banner {
+	width: 320px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
