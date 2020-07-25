@@ -199,7 +199,8 @@ a:hover {
 	text-align: center;
 	color: blue;
 	margin-top: 2rem;
-	
+	padding-left: 30%;
+	padding-right: 30%;
 }
 .loading {
 	font-family: NanumBarunGothic;
