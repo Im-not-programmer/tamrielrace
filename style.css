@@ -147,13 +147,6 @@ body {
 }
 
 
-		
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 10px;
-	}
-}
-
 .doramg-link {
 	font-family: NanumBarunGothic;
   font-size: 2rem;
@@ -221,4 +214,15 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 8px;
+	}
+	.result-message {
+		font-size: 0.8rem;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
 }
